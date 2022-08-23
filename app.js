@@ -40,4 +40,14 @@ const nextBtn = document.querySelector('.next-btn')
 const randomBtn = document.querySelector('.random-btn')
 
 //set starting items
-let currentItem = 0;
+let currentItem = 2;
+
+// load initial item
+
+window.addEventListener('DOMContentLoaded', function() {
+    const item = reviews[currentItem];
+    img.src = item.img;
+    author.textContent = item.name;
+    job.textContent = item.job;
+    info.textContent = item.text;
+});
